@@ -1,0 +1,15 @@
+Para criar o projeto
+Packege name: nomegithub.com.github.proj -> nome do projeto Minuscula
+Estrutura de pasta: D:\3SIS\nomeProjeto
+deixar a API padrao
+td vez q mexer no build gradle, fazer a sync
+component activity é a classe que tem td oq precisa para aplicar no projet
+bundle: uma classe q contem td oq precisa para auxiliar no estado de uma activity
+estado é a caracteristica de como o obj está
+? em uma classa, etc -> para representar q pode null, ex: Bundle?
+para criar o arquivo xml -> layout resource file -> usar snake case activity_main para nomear arquivo
+match_parent -> classe pai -> dispositivo
+
+
+FAZER FASE 2!!!!!!!!!!!!!
+Vir quinta, fazer a fase 2, e explicar o código e as dificuldades
