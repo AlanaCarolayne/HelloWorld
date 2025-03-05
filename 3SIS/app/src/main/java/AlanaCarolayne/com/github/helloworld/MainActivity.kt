@@ -2,6 +2,9 @@ package AlanaCarolayne.com.github.helloworld
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import android.view.inputmethod.EditorInfo
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
@@ -18,5 +21,22 @@ class MainActivity : ComponentActivity() {
 
         setContentView(R.layout.activity_main)
 
+        val etName = findViewById<EditText>(R.id.etName)
+        val tvHelloMessage = findViewById<TextView>(R.id.tvHelloMessage)
+
+        etName.setOnEditorActionListener { textView, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                val name = textView.text.toString().trim()
+
+                if (name.isNotEmpty()) {
+                    tvHelloMessage.text = "Hello World, $name!"
+                } else {
+                    tvHelloMessage.text = "Hello World!"
+                }
+                true
+            } else {
+                false
+            }
+        }
     }
 }
